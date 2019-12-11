@@ -546,6 +546,125 @@ for(var i=1; i < 8; i++) {
 }
 console.log(myArray);
 
+var ourArray = [];
+for(var i=10; i > 0; i -=2){
+    ourArray.push(i);
+}
+console.log(ourArray);  //[10, 8, 6, 4,2]
+
+var myArray = [];
+for(var i = 9; i > 0; i -=2){
+    myArray.push(i);
+}
+console.log(myArray);
+
+var ourArr = [9, 10, 11, 12];
+var ourTotal = 0;
+
+for(var i = 0; i < ourArr.length; i++){
+    ourTotal += ourArr[i];
+}
+console.log(ourTotal);
+
+var myArr = [2,3,4,5,6];
+var total = 0;
+
+for(var i = 0; i < myArr.length; i++){
+    total += myArr[i];
+}
+console.log(total);
+///
+function multiplyAll(arr) {
+    var product = 1;
+
+    for(var i=0; i < arr.length; i++){
+        for(var j=0; j < arr[i].length; j++){
+            product *= arr[i][j];
+        }
+    }
+    return product;
+}
+
+var product = multiplyAll([[1,2],[3,4],[5,6,7]]);
+console.log(product);
+//
+var myArray = [];
+var i = 10;
+do {
+    myArray.push(i);
+    i++;
+}while (i < 5) 
+console.log(i, myArray);
+//
+var contacts = [
+    {
+        "firstName":"Akira",
+        "lastName":"Laine",
+        "number":"0543236543",
+        "likes":["Piza", "Coding", "Brouwnie points"]
+    },
+    {
+        "firstName":"Harry",
+        "lastName":"Potter",
+        "number":"0994372684",
+        "likes":["Hogwarts","Magic","Hagrid"]
+    },
+    {
+        "firstName":"Sherlock",
+        "LastName":"Holmes",
+        "number":"0487345643",
+        "likes":["Intriguing Cases", "Violin"]
+    },
+    {
+        "firstName":"kristian",
+        "lastName":"Vos",
+        "number":"unknown",
+        "likes":["Javascript", "Gaming", "Foxes"]
+    }
+];
+
+function lookUpProfile(name, prop){
+    for(var i = 0; i < contacts.length; i++){
+        if(contacts[i].firstName === name){
+            return contacts[i][prop] || "No such property";
+        }
+    }
+    return "No such contact";
+}
+
+var data = lookUpProfile("Akira", "likes");
+
+console.log(data);
+
+//
+function randomFraction() {
+    return 0;
+}
+console.log(randomFraction());
+//
+var randomNumberBetween0and19 = Math.floor(Math.random() * 20);
+function randomWholeNum(){
+
+    return Math.floor(Math.random() * 10);
+}
+console.log(randomWholeNum());
+//
+function ourRandomRange(ourMin, ourMax) {
+    return Math.floor(Math.random()*(ourMax - ourMin + 1)) + ourMin;
+}
+ourRandomRange(1, 9);
+
+function randomRange(myMin,myMax){
+
+    return 0;
+}
+
+var myRandom = randomRange(5, 15);
+console.log(myRandom);
+
+
+
+
 
 
 
