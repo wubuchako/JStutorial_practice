@@ -707,8 +707,34 @@ const increment = (function (){
 })();
 console.log(increment(5,2)); //7
 console.log(increment(5));//6
+//
+function makeClass() {
+    class Thermostat {
+        constructor(temp){
+            this._temp = 5/9 * (temp - 32);
+        }
+        get temperature () {
+            return this._temp;
+        }
+        set temperature(updatedTemp){
+            this._temp = updatedTemp;
+        }
+    }
+    return Thermostat;
+}
 
+const Thermostat = makeClass();
+const thermos = new Thermostat(76);
+let temp = thermos.temperature;
+thermos.temperature = 26;
+temp = thermos.temperature;
+//26
 
+//
+import {capitalizeString} from "./string_function"
+const cap = capitalizeString("hello");
+console.log(cap);
 
-
+export const capitalizeString = str => str.toUpperCase();
+//
 
